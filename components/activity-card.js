@@ -18,6 +18,7 @@ class ActivityCardComponent extends HTMLElement {
 
     render() {
         const title = this.getAttribute('title') || '';
+        const price = this.getAttribute('price') || '';
         const time = this.getAttribute('time') || '';
         const ages = this.getAttribute('ages') || '';
         const capacity = this.getAttribute('capacity') || '';
@@ -53,6 +54,10 @@ class ActivityCardComponent extends HTMLElement {
                     margin-top: 1.5rem;
                 }
                 .ages {
+                    font-weight: bold;
+                    margin-top: 1.5rem;
+                }
+                .price {
                     font-weight: bold;
                     margin-top: 1.5rem;
                 }
@@ -107,6 +112,7 @@ class ActivityCardComponent extends HTMLElement {
                     </div>
                 ` : ''}
                 ${status === 'open' && spondLink ? `
+                    ${price ? `<p class="price">Pris: ${price} (alle samlinger)</p>` : ''}
                     <a href="${spondLink}" class="button">
                         Klikk her for påmelding
                     </a>
