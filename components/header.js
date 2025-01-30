@@ -68,10 +68,9 @@ class HeaderComponent extends HTMLElement {
                         </button>
                     </div>
                     <div class="nav-links">
-                        <a href="#heim">Heim</a>
-                        <a href="#om">Om</a>
-                        <a href="#tema">Tema</a>
-                        <a href="#kontakt">Kontakt</a>
+                        <a href="/">Heim</a>
+                        <a href="/index.html#tema">Tema</a>
+                        <a href="/index.html#om">Om</a>
                         <a href="paamelding.html">Påmelding →</a>
                     </div>
                 </nav>

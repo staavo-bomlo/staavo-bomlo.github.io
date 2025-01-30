@@ -19,6 +19,8 @@ class ActivityCardComponent extends HTMLElement {
     render() {
         const title = this.getAttribute('title') || '';
         const time = this.getAttribute('time') || '';
+        const ages = this.getAttribute('ages') || '';
+        const capacity = this.getAttribute('capacity') || '';
         const status = this.getAttribute('status') || 'open'; // open, closed, full
         const spondLink = this.getAttribute('spond-link') || '';
 
@@ -47,6 +49,14 @@ class ActivityCardComponent extends HTMLElement {
                     color: #4B5563;
                 }
                 .time {
+                    font-weight: bold;
+                    margin-top: 1.5rem;
+                }
+                .ages {
+                    font-weight: bold;
+                    margin-top: 1.5rem;
+                }
+                .capacity {
                     font-weight: bold;
                     margin-top: 1.5rem;
                 }
@@ -83,6 +93,8 @@ class ActivityCardComponent extends HTMLElement {
                 <div class="content">
                     <slot></slot>
                 </div>
+                ${capacity ? `<p class="capacity">Kapasitet: ${capacity}</p>` : ''}
+                ${ages ? `<p class="ages">Aldersgrense: ${ages}</p>` : ''}
                 ${time ? `<p class="time">Tid: ${time}</p>` : ''}
                 ${status === 'full' ? `
                     <div class="status-banner full">
