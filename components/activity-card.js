@@ -78,6 +78,10 @@ class ActivityCardComponent extends HTMLElement {
                     background-color: #F3F4F6;
                     color: #374151;
                 }
+                .status-banner.starting-later {
+                    background-color: #FEF3C7;
+                    color: #92400E;
+                }
                 .button {
                     display: inline-block;
                     padding: 0.625rem 0.875rem;
@@ -109,6 +113,11 @@ class ActivityCardComponent extends HTMLElement {
                 ${status === 'closed' ? `
                     <div class="status-banner closed">
                         <p>Påmeldingen er nå stengt</p>
+                    </div>
+                ` : ''}
+                ${status === 'starting later' ? `
+                    <div class="status-banner starting-later">
+                        <p>🍂🍁 Påmelding starter i høstferien 🍁🍂</p>
                     </div>
                 ` : ''}
                 ${status === 'open' && spondLink ? `
