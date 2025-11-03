@@ -1,15 +1,15 @@
 class HeaderComponent extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-    }
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+  }
 
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.shadowRoot.innerHTML = `
+  render() {
+    this.shadowRoot.innerHTML = `
             <style>
                 :host {
                     display: block;
@@ -71,12 +71,13 @@ class HeaderComponent extends HTMLElement {
                         <a href="/">Heim</a>
                         <a href="/index.html#tema">Tema</a>
                         <a href="/index.html#om">Om</a>
+                        <a href="vilvite.html">VilVite 3D-kurs</a>
                         <a href="paamelding.html">Påmelding →</a>
                     </div>
                 </nav>
             </header>
         `;
-    }
+  }
 }
 
-customElements.define('stavo-header', HeaderComponent); 
+customElements.define("stavo-header", HeaderComponent);
